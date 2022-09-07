@@ -1,11 +1,10 @@
-id;title;description;release_date
-1;Table Fish;Dynamic programming;2022-09-07T05:34:38
-2;real-time;Principal compress state;2022-09-06T14:50:55
-3;intuitive Center Georgia;Wyoming calculating;2022-09-06T22:18:41
-4;toolset interfaces;Industrial Cotton Paradigm;2022-09-06T10:58:59
-5;secondary Toys;Alaska Soft FTP;2022-09-06T18:24:49
-6;violet deposit;lime;2022-09-06T12:23:33
-7;cross-platform;optical blockchains orchestrate;2022-09-06T14:41:49
-8;withdrawal Australian;Shoes navigating Ergonomic;2022-09-06T20:37:17
-9;Coordinator Health Tools;Computer e-business indigo;2022-09-06T18:56:46
-10;monitor SQL Product;Home Industrial back-end;2022-09-07T01:30:20
+id;title;description;release_date;publisher_id
+1;Table Fish;Dynamic programming;2022-09-07T05:34:38;2
+2;real-time;Principal compress state;2022-09-06T14:50:55;3
+3;intuitive Center Georgia;Wyoming calculating;2022-09-06T22:18:41;5
+4;toolset interfaces;Industrial Cotton Paradigm;2022-09-06T10:58:59;2
+5;secondary Toys;Alaska Soft FTP;2022-09-06T18:24:49;1
+6;violet deposit;lime;2022-09-06T12:23:33;9
+7;cross-platform;optical blockchains orchestrate;2022-09-06T14:41:49;1
+8;withdrawal Australian;Shoes navigating Ergonomic;2022-09-06T20:37:17;8
+9;Coordinator Health Tools;Computer e-business indigo;2022-09-06T18:56:46;6

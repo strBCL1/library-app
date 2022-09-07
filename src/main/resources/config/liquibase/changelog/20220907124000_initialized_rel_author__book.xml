@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd">
+
+    <changeSet id="20220907124000-data" author="Artem Popov">
+        <loadData
+                tableName="rel_author__book"
+                file="config/liquibase/fake-data/rel_author__book.csv"
+                separator=";"
+                usePreparedStatements="true">
+            <column name="book_id" type="numeric"/>
+            <column name="author_id" type="numeric"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
