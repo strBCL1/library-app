@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20220907094146",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "author",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Author",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "author",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "author",
+      "ownerSide": true,
+      "relationshipName": "book",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

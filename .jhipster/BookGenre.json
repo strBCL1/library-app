@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20220907095121",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "book_genre",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "BookGenre",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "bookGenre",
+      "ownerSide": false,
+      "relationshipName": "book",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

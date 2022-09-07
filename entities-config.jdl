@@ -1,0 +1,36 @@
+entity Book {
+	title String maxlength(200),
+    description String maxlength(500),
+    releaseDate ZonedDateTime
+}
+
+entity Author {}
+
+entity Publisher {
+	firstName String maxlength(150),
+    lastName String maxlength(150),
+    address String maxlength(200)
+    phoneNumber String minlength(12) maxlength(12)
+}
+
+entity BookGenre {
+	name String maxlength(50)
+}
+
+relationship OneToOne {
+	Author to User
+}
+
+relationship ManyToMany {
+	Author to Book,
+    Book to BookGenre
+}
+
+relationship OneToMany {
+	Publisher to Book
+}
+
+dto * with mapstruct
+paginate * with pagination
+service * with serviceClass
+filter *

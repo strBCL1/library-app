@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20220907094145",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "book",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "releaseDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Book",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "bookGenre",
+      "otherEntityRelationshipName": "book",
+      "ownerSide": true,
+      "relationshipName": "bookGenre",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "publisher",
+      "otherEntityRelationshipName": "book",
+      "relationshipName": "publisher",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "author",
+      "otherEntityRelationshipName": "book",
+      "ownerSide": false,
+      "relationshipName": "author",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

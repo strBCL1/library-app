@@ -1,0 +1,14 @@
+application {
+  config {
+  	authenticationType session,
+    baseName library_app,
+    buildTool gradle,
+    cacheProvider ehcache,
+    devDatabaseType h2Memory,
+    enableSwaggerCodegen true,
+    packageName com.mycompany.libraryapp,
+    prodDatabaseType postgresql,
+    serverPort 8080,
+    testFrameworks [cucumber]
+  }
+}

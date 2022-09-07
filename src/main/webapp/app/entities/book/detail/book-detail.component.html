@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="book">
+      <h2 data-cy="bookDetailsHeading"><span>Book</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ book.id }}</span>
+        </dd>
+        <dt><span>Title</span></dt>
+        <dd>
+          <span>{{ book.title }}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+          <span>{{ book.description }}</span>
+        </dd>
+        <dt><span>Release Date</span></dt>
+        <dd>
+          <span>{{ book.releaseDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span>Book Genre</span></dt>
+        <dd>
+          <span *ngFor="let bookGenre of book.bookGenres; let last = last">
+            <a [routerLink]="['/book-genre', bookGenre.id, 'view']">{{ bookGenre.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+        <dt><span>Publisher</span></dt>
+        <dd>
+          <div *ngIf="book.publisher">
+            <a [routerLink]="['/publisher', book.publisher.id, 'view']">{{ book.publisher.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/book', book.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
